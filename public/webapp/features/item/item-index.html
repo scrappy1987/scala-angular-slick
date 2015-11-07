@@ -1,0 +1,10 @@
+<div data-ng-controller="itemController as itemCtrl">
+    <div>This is all the current items</div>
+    <div data-ng-repeat="item in itemCtrl.items track by $index">
+        {{item}}
+        <button><a ui-sref="details({ id: item.id})">Details</a></button>
+        <button><a ui-sref="amend({ id: item.id})">Amend</a></button>
+        <button data-ng-click="itemCtrl.delete(item.id)">Delete</button>
+    </div>
+    <button><a ui-sref="add()">Add</a></button>
+</div>

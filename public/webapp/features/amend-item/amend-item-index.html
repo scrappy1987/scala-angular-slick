@@ -1,0 +1,8 @@
+<div data-ng-controller="amendItemController as amendItemCtrl">
+    <form novalidate class="table-form">
+        Id:{{amendItemCtrl.id}} <br/>
+        Product: <input type="text" ng-model="amendItemCtrl.item.itemName" /><br />
+        Colour: <input type="text" ng-model="amendItemCtrl.item.itemColour" /><br />
+        <input type="submit" ng-click="amendItemCtrl.updateItem(amendItemCtrl.item)" value="Amend" />
+    </form>
+</div>

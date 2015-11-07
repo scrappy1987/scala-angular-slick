@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+GET           /items/all                     @controllers.Application.findAllItems
+POST          /items/insert                  @controllers.Application.insertItem
+DELETE        /items/delete/:itemId          @controllers.Application.deleteItem(itemId)
+POST          /items/updateItem              @controllers.Application.updateItem
+GET           /items/retrieve/:itemId        @controllers.Application.retrieveItem(itemId)
+
+#STATIC CONTENT
+
+# Home page
+GET           /                              controllers.Assets.at(path="/public/webapp", file="index.html")
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /*file                         controllers.Assets.versioned(path="/public/webapp", file: Asset)
